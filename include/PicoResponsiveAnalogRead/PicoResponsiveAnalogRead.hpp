@@ -217,6 +217,13 @@ public:
   {
     analogResolution = resolution;
   }
+
+  // Get analog resolution
+  inline int getAnalogResolution() const
+  {
+    return analogResolution;
+  }
+
   // if your ADC is something other than 12bit (4096), set that here
 
 private:
