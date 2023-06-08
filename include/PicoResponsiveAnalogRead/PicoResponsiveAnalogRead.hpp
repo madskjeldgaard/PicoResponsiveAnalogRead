@@ -234,7 +234,7 @@ private:
   float activityThreshold = 4.0;
   bool edgeSnapEnable = true;
 
-  float smoothValue;
+  float smoothValue = 0.0;
   unsigned long lastActivityMS;
   float errorEMA = 0.0;
   bool sleeping = false;
