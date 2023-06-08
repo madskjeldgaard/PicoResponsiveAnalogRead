@@ -142,7 +142,7 @@ public:
     // add a small amount to snap so it'll tend to snap into a more accurate
     // position before sleeping starts.
     if (sleepEnable) {
-      snap *= 0.5 + 0.5;
+      snap = (snap*0.5) + 0.5;
     }
 
     // calculate the exponential moving average based on the snap
@@ -234,7 +234,7 @@ private:
   float activityThreshold = 4.0;
   bool edgeSnapEnable = true;
 
-  float smoothValue;
+  float smoothValue = 0.0;
   unsigned long lastActivityMS;
   float errorEMA = 0.0;
   bool sleeping = false;
